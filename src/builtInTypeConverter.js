@@ -71,6 +71,16 @@ class BuiltInTypeConverter {
     return true;
   }
 
+  anySimpleType(node, jsonSchema, xsd) {
+    jsonSchema.type = JSON_SCHEMA_TYPES.STRING;
+    return true;
+  }
+
+  anyAtomicType(node, jsonSchema, xsd) {
+    jsonSchema.type = JSON_SCHEMA_TYPES.STRING;
+    return true;
+  }
+
   schema(node, jsonSchema, xsd) {
     jsonSchema.type = JSON_SCHEMA_TYPES.OBJECT;
     return true;
